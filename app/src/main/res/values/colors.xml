@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<resources>
+    <color name="purple">#593CA4</color>
+    <color name="purple_light">#F8F5FC</color>
+    <color name="ring_track">#D9D0E9</color>
+    <color name="page">#FFFFFF</color>
+    <color name="ink">#151319</color>
+    <color name="muted">#69656F</color>
+    <color name="line">#D4D0D8</color>
+    <color name="nav_background">#F4F3F5</color>
+    <color name="green">#07863D</color>
+    <color name="green_light">#DFF5E7</color>
+    <color name="orange">#D65A00</color>
+    <color name="red">#CD2337</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

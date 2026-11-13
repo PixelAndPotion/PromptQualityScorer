@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/screenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <include
+            android:id="@+id/screenHome"
+            layout="@layout/screen_home" />
+        <include
+            android:id="@+id/screenLoading"
+            layout="@layout/screen_loading"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/screenScore"
+            layout="@layout/screen_score"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/screenSpec"
+            layout="@layout/screen_spec"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/screenHistory"
+            layout="@layout/screen_history"
+            android:visibility="gone" />
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/purple" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="72dp"
+        android:background="@color/nav_background"
+        app:menu="@menu/bottom_navigation"
+        app:itemIconTint="@color/nav_tint"
+        app:itemTextColor="@color/nav_tint"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@null" />
+</LinearLayout>

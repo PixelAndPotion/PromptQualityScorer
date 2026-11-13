@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:padding="10dp"
+                    android:background="@drawable/brand_background"
+                    app:srcCompat="@drawable/ic_target"
+                    app:tint="@color/white"
+                    android:importantForAccessibility="no" />
+                <TextView
+                    style="@style/ScreenHeading"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/app_name"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/homeHeading"
+                style="@style/ScreenHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_your_spec"
+                android:layout_marginTop="32dp" />
+            <TextView
+                android:id="@+id/homeIntro"
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_intro"
+                android:layout_marginTop="10dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="228dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/prompt_background"
+                android:gravity="top|start"
+                android:hint="@string/prompt_hint"
+                android:inputType="textMultiLine|textCapSentences"
+                android:imeOptions="flagNoExtractUi"
+                android:textSize="15sp"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/muted" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAnalyse"
+                style="@style/AppButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analyse"
+                android:layout_marginTop="20dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCompanyProfile"
+                    style="@style/AppButton.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/company_profile"
+                    android:textSize="12sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewHistory"
+                    style="@style/AppButton.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/view_history"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textActiveRulesSummary"
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_rules"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

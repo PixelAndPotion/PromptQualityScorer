@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="20dp">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backLoading"
+            style="@style/IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+        <TextView
+            style="@style/ScreenHeading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textSize="19sp" />
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+            <TextView
+                android:id="@+id/loadingHeading"
+                style="@style/ScreenHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analysing"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/loadingHint"
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analysing_hint"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/muted" />
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="36dp">
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="true"
+                    app:indicatorSize="174dp"
+                    app:indicatorInset="0dp"
+                    app:trackThickness="7dp"
+                    app:trackColor="@color/ring_track"
+                    app:indicatorColor="@color/purple"
+                    android:contentDescription="@string/analysing" />
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_sparkle"
+                    android:importantForAccessibility="no" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+                <TextView
+                    style="@style/BodyText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/understanding" />
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true"
+                    app:indicatorSize="18dp"
+                    app:indicatorInset="0dp"
+                    app:trackColor="@color/ring_track"
+                    app:trackThickness="2dp"
+                    app:indicatorColor="@color/purple"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+                <TextView
+                    style="@style/BodyText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checking" />
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true"
+                    app:indicatorSize="18dp"
+                    app:indicatorInset="0dp"
+                    app:trackColor="@color/ring_track"
+                    app:trackThickness="2dp"
+                    app:indicatorColor="@color/purple"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+                <TextView
+                    style="@style/BodyText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviewing" />
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true"
+                    app:indicatorSize="18dp"
+                    app:indicatorInset="0dp"
+                    app:trackColor="@color/ring_track"
+                    app:trackThickness="2dp"
+                    app:indicatorColor="@color/purple"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+                <TextView
+                    style="@style/BodyText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calculating" />
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true"
+                    app:indicatorSize="18dp"
+                    app:indicatorInset="0dp"
+                    app:trackColor="@color/ring_track"
+                    app:trackThickness="2dp"
+                    app:indicatorColor="@color/purple"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/AppButton.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_marginTop="32dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

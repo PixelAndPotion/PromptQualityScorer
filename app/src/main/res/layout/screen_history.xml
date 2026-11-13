@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="20dp">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backHistory"
+            style="@style/IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+        <TextView
+            style="@style/ScreenHeading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/past_prompts"
+            android:textSize="19sp" />
+    </LinearLayout>
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/historyFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="10dp"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:checkedChip="@id/filterAll">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filterAll"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:checkable="true"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/filter_background"
+            android:textColor="@color/filter_text"
+            app:chipStrokeColor="@color/line" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filterHigh"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/high"
+            android:checkable="true"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/filter_background"
+            android:textColor="@color/filter_text"
+            app:chipStrokeColor="@color/line" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filterMedium"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medium"
+            android:checkable="true"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/filter_background"
+            android:textColor="@color/filter_text"
+            app:chipStrokeColor="@color/line" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filterLow"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low"
+            android:checkable="true"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/filter_background"
+            android:textColor="@color/filter_text"
+            app:chipStrokeColor="@color/line" />
+    </com.google.android.material.chip.ChipGroup>
+    <TextView
+        android:id="@+id/filterHint"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_hint"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textSize="12sp"
+        android:textColor="@color/muted"
+        android:layout_marginBottom="10dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false" />
+        <TextView
+            android:id="@+id/emptyHistory"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="28dp"
+            android:text="@string/empty_history" />
+    </FrameLayout>
+</LinearLayout>
